@@ -2,12 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Artefact</title>
+  <title>Data Quality Summary Report</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; line-height: 1.6; }
+    h1 { border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem 0.75rem; text-align: left; }
+    th { background: #f5f5f5; }
+    ul { padding-left: 1.25rem; }
+    li { margin-bottom: 0.25rem; }
+  </style>
 </head>
 <body>
-  <p>
-    Fill this file with the written deliverable your problem brief asks for (for example, a
-    Reconciliation Report). The grader reads this exact file — do not rename or move it.
-  </p>
+  <h1>Data Quality Summary Report</h1>
+
+  <h2>Overview</h2>
+  <p>This report summarizes data quality for a single numeric field across 4 sample records. The goal is to identify missing values and assess the distribution of observed values.</p>
+
+  <h2>Summary Statistics</h2>
+  <table>
+    <tr><th>Metric</th><th>Value</th></tr>
+    <tr><td>Records analyzed</td><td>4</td></tr>
+    <tr><td>Non-null values</td><td>3</td></tr>
+    <tr><td>Missing values</td><td>1</td></tr>
+    <tr><td>Invalid values</td><td>0</td></tr>
+    <tr><td>Missing rate</td><td>25.0%</td></tr>
+    <tr><td>Mean</td><td>20.0</td></tr>
+    <tr><td>Min</td><td>10.0</td></tr>
+    <tr><td>Max</td><td>30.0</td></tr>
+    <tr><td>Range</td><td>20.0</td></tr>
+    <tr><td>Median</td><td>20.0</td></tr>
+  </table>
+
+  <h2>Interpretation</h2>
+  <p>The dataset is small (4 records) and mostly complete, with a 25% missing rate (1 out of 4 values missing in the target field) and no invalid values. The observed values (10, 20, 30) are evenly spaced around a mean and median of 20.0, suggesting a symmetric distribution. No outliers are present in this sample.</p>
+
+  <h2>Recommendations</h2>
+  <ul>
+    <li>Investigate the cause of the missing value and whether it can be recovered.</li>
+    <li>Collect additional records to improve statistical reliability.</li>
+    <li>Consider imputation strategies (e.g., mean or median imputation) for downstream analysis, if appropriate.</li>
+  </ul>
 </body>
 </html>

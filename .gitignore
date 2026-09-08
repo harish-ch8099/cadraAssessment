@@ -1,0 +1,13 @@
+# Ignore assessment snapshot and generated test data
+assessment-pack/
+snapshot-pack/
+test_data/
+test_data/generated/
+*.zip
+*.tar.gz
+.env
+.env.local
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/

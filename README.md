@@ -7,17 +7,15 @@ Starter repository for the Cadra F1 walking-skeleton capstone. Use OpenCode with
 - Python 3.11+
 - [OpenCode](https://opencode.ai) ≥ 1.17.0
 - A Cadra JWT (`CADRA_TOKEN`) from the F1 Setup page
-- Your Cadra proxy URL (from the F1 Setup page)
 
 ## Setup
 
 1. Clone this repo (or use it as a GitHub template).
-2. Set the environment variables (both values come from the F1 Setup page):
+2. Set the `CADRA_TOKEN` environment variable (value comes from the F1 Setup page):
    ```bash
-   export CADRA_PROXY_URL=<your-proxy-url>   # e.g. https://your-proxy.example.com/v1
    export CADRA_TOKEN=<your-cadra-jwt>
    ```
-   `opencode.json` reads both via `{env:…}` — no file edits needed.
+   The proxy URL in `opencode.json` is pre-configured for the Cadra proxy. Only the token is read from the environment (`{env:CADRA_TOKEN}`) — no file edits needed.
 3. Install OpenCode if not already installed (see [opencode.ai](https://opencode.ai)).
 4. Run OpenCode in this directory:
    ```bash
@@ -39,7 +37,7 @@ pip install -r requirements.txt
 
 ```
 .
-├── opencode.json    # Cadra provider config (reads CADRA_PROXY_URL + CADRA_TOKEN from env)
+├── opencode.json    # Cadra provider config (reads CADRA_TOKEN from env; proxy URL pre-configured)
 ├── APPROACH.md      # Your written approach (required for submission)
 ├── src/
 │   └── solution.py  # Your solution code
